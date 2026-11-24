@@ -1,0 +1,6 @@
+{
+  "name": "نور القرآن",
+  "description": "منصة قرآنية إسلامية متكاملة للمصحف الشريف والتلاوة والحفظ والتفسير والبحث والعبادات",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "UserProgressProfile": {
+      "title": "UserProgressProfile",
+      "description": "Cloud-synced reading position, Khatmah counter, and Tasbeeh total for an authenticated user.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Firebase Auth UID of the owner." },
+        "displayName": { "type": "string", "description": "Display name of the user." },
+        "lastSurah": { "type": "integer", "description": "Last read Surah number (1..114)." },
+        "lastAyah": { "type": "integer", "description": "Last read Ayah number (1..286)." },
+        "lastPage": { "type": "integer", "description": "Last read Madinah Mushaf page (1..604)." },
+        "khatmahCount": { "type": "integer", "description": "Number of completed Khatmahs." },
+        "tasbeehTotal": { "type": "integer", "description": "Total synced Tasbeeh count." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Server timestamp on creation." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Server timestamp on update." }
+      },
+      "required": ["userId", "displayName", "lastSurah", "lastAyah", "lastPage", "khatmahCount", "tasbeehTotal", "createdAt", "updatedAt"]
+    },
+    "UserBookmark": {
+      "title": "UserBookmark",
+      "description": "Cloud-synced Quran verse bookmark.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Firebase Auth UID of the owner." },
+        "surahNumber": { "type": "integer", "description": "Surah number (1..114)." },
+        "ayahNumber": { "type": "integer", "description": "Ayah number (1..286)." },
+        "pageNumber": { "type": "integer", "description": "Page number (1..604)." },
+        "label": { "type": "string", "description": "User-defined bookmark label." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Server timestamp on creation." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Server timestamp on update." }
+      },
+      "required": ["userId", "surahNumber", "ayahNumber", "pageNumber", "label", "createdAt", "updatedAt"]
+    },
+    "UserMemorizationPlan": {
+      "title": "UserMemorizationPlan",
+      "description": "Cloud-synced Quran memorization plan progress.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Firebase Auth UID of the owner." },
+        "surahNumber": { "type": "integer", "description": "Target Surah number (1..114)." },
+        "surahName": { "type": "string", "description": "Arabic name of the target Surah." },
+        "dailyAyahTarget": { "type": "integer", "description": "Daily target Ayahs." },
+        "completedAyahs": { "type": "integer", "description": "Completed Ayahs count." },
+        "totalAyahs": { "type": "integer", "description": "Total Ayahs in target Surah." },
+        "status": { "type": "string", "enum": ["ACTIVE", "COMPLETED"], "description": "Plan status." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Server timestamp on creation." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Server timestamp on update." }
+      },
+      "required": ["userId", "surahNumber", "surahName", "dailyAyahTarget", "completedAyahs", "totalAyahs", "status", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/profile/{docId}": {
+      "schema": { "$ref": "#/entities/UserProgressProfile" },
+      "description": "User progress summary document (docId: main)."
+    },
+    "/users/{userId}/bookmarks/{bookmarkId}": {
+      "schema": { "$ref": "#/entities/UserBookmark" },
+      "description": "User Quran bookmarks subcollection."
+    },
+    "/users/{userId}/memorization_plans/{planId}": {
+      "schema": { "$ref": "#/entities/UserMemorizationPlan" },
+      "description": "User memorization plans subcollection."
+    }
+  }
+}

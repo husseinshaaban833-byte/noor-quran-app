@@ -1,0 +1,14 @@
+[
+  {"id":1,"name":"إذاعة ماهر المعيقلي","category":"قراء","url":"https://backup.qurango.net/radio/maher"},
+  {"id":2,"name":"إذاعة مشاري العفاسي","category":"قراء","url":"https://backup.qurango.net/radio/mishary_alafasi"},
+  {"id":3,"name":"إذاعة عبد الباسط عبد الصمد","category":"قراء","url":"https://backup.qurango.net/radio/abdulbasit_abdulsamad"},
+  {"id":4,"name":"إذاعة محمد صديق المنشاوي","category":"قراء","url":"https://backup.qurango.net/radio/mohammed_siddiq_alminshawi"},
+  {"id":5,"name":"إذاعة محمود خليل الحصري","category":"قراء","url":"https://backup.qurango.net/radio/mahmoud_khalil_alhussary"},
+  {"id":6,"name":"إذاعة عبد الرحمن السديس","category":"الحرمين","url":"https://backup.qurango.net/radio/abdulrahman_alsudaes"},
+  {"id":7,"name":"إذاعة سعود الشريم","category":"الحرمين","url":"https://backup.qurango.net/radio/saud_alshuraim"},
+  {"id":8,"name":"إذاعة أبو بكر الشاطري","category":"قراء","url":"https://backup.qurango.net/radio/shaik_abu_bakr_al_shatri"},
+  {"id":9,"name":"إذاعة أحمد العجمي","category":"قراء","url":"https://backup.qurango.net/radio/ahmad_alajmy"},
+  {"id":10,"name":"إذاعة إدريس أبكر","category":"قراء","url":"https://backup.qurango.net/radio/idrees_abkr"},
+  {"id":11,"name":"إذاعة إبراهيم الأخضر","category":"قراء","url":"https://backup.qurango.net/radio/ibrahim_alakdar"},
+  {"id":12,"name":"إذاعة ياسر الدوسري","category":"الحرمين","url":"https://backup.qurango.net/radio/yasser_aldosari"}
+]

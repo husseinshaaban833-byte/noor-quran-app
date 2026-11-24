@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">نور القرآن</string>
+    <string name="widget_prayer_desc">مواقيت الصلاة القادمة من نور القرآن</string>
+    <string name="widget_ayah_desc">آية اليوم من نور القرآن</string>
+    <string name="playback_channel_name">تلاوة القرآن الكريم</string>
+    <string name="prayer_channel_name">تنبيهات الصلاة والأذكار</string>
+</resources>
